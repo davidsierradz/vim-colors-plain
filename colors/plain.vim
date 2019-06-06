@@ -41,6 +41,8 @@ let s:dark_purple     = { "gui": "#523C79", "cterm": "5"   }
 let s:light_purple    = { "gui": "#6855DE", "cterm": "13"  }
 let s:light_yellow    = { "gui": "#F3E430", "cterm": "11"  }
 let s:dark_yellow     = { "gui": "#A89C14", "cterm": "3"   }
+let s:sol_base2       = { "gui": "#eee8d5", "cterm": "15"  }
+let s:sol_base02      = { "gui": "#073642", "cterm": "0"   }
 
 if &background == "dark"
   let s:bg               = s:black
@@ -63,6 +65,7 @@ if &background == "dark"
   let s:ok               = s:light_green
   let s:warning          = s:yellow
   let s:error            = s:light_red
+  let s:statusline_bg    = s:sol_base02
 else
   let s:bg               = s:white
   let s:bg_subtle        = s:lighter_gray
@@ -84,6 +87,7 @@ else
   let s:ok               = s:light_green
   let s:warning          = s:yellow
   let s:error            = s:dark_red
+  let s:statusline_bg    = s:sol_base2
 endif
 
 unlet s:black
@@ -107,6 +111,8 @@ unlet s:dark_purple
 unlet s:light_purple
 unlet s:light_yellow
 unlet s:dark_yellow
+unlet s:sol_base2
+unlet s:sol_base02
 
 " https://github.com/noahfrederick/vim-hemisu/
 function! s:h(group, style)
@@ -227,9 +233,9 @@ hi! link helpHyperTextEntry Title
 hi! link helpHyperTextJump  String
 
 " __StatusLine__
-call s:h("StatusLine",        {"gui": "underline", "bg": s:bg, "fg": s:norm_very_subtle})
+call s:h("StatusLine",        {"bg": s:statusline_bg, "fg": s:norm_very_subtle})
 " __StatusLineNC__
-call s:h("StatusLineNC",      {"gui": "underline", "bg": s:bg, "fg": s:bg_subtle})
+call s:h("StatusLineNC",      {"bg": s:bg, "fg": s:bg_subtle})
 " __WildMenu__
 call s:h("WildMenu",          {"gui": "underline,bold", "bg": s:bg, "fg": s:norm})
 
