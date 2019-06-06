@@ -125,7 +125,7 @@ if has("gui")
     call s:h("Normal",    {"fg": s:norm, "bg": s:bg})
     call s:h("Cursor",    {"fg": s:bg, "bg": s:norm})
 else
-    call s:h("Normal",    {"fg": s:norm})
+    call s:h("Normal",    {"fg": s:norm, "bg": s:bg})
     hi! link Cursor       Identifier
 endif
 hi! link Identifier       Normal
