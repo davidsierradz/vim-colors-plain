@@ -168,7 +168,7 @@ hi! link Directory        Constant
 hi! link Title            Constant
 
 " __Statement__
-call s:h("Statement",     {"fg": s:norm, "gui": "bold"})
+call s:h("Statement",     {"fg": s:norm})
 hi! link Include          Statement
 hi! link Conditonal       Statement
 hi! link Repeat           Statement
