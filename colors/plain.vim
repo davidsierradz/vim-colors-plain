@@ -20,9 +20,9 @@ endif
 
 let g:colors_name='plain'
 
-let s:black           = { "gui": "#002b36", "cterm": "0"   }
+let s:black           = { "gui": "#282828", "cterm": "0"   }
 let s:medium_gray     = { "gui": "#767676", "cterm": "243" }
-let s:white           = { "gui": "#fdf6e3", "cterm": "15"  }
+let s:white           = { "gui": "#fbf1c7", "cterm": "15"  }
 let s:light_black     = { "gui": "#424242", "cterm": "8"   }
 let s:lighter_black   = { "gui": "#545454", "cterm": "240" }
 let s:subtle_black    = { "gui": "#303030", "cterm": "236" }
@@ -42,7 +42,7 @@ let s:light_purple    = { "gui": "#6855DE", "cterm": "13"  }
 let s:light_yellow    = { "gui": "#F3E430", "cterm": "11"  }
 let s:dark_yellow     = { "gui": "#A89C14", "cterm": "3"   }
 let s:sol_base2       = { "gui": "#eee8d5", "cterm": "15"  }
-let s:sol_base02      = { "gui": "#073642", "cterm": "0"   }
+let s:sol_base02      = { "gui": "#32302f", "cterm": "0"   }
 
 if &background == "dark"
   let s:bg               = s:black
@@ -248,7 +248,7 @@ call s:h("Pmenu",         {"fg": s:norm, "bg": s:cursor_line})
 hi! link PmenuSbar        Pmenu
 hi! link PmenuThumb       Pmenu
 " __PmenuSel__
-call s:h("PmenuSel",      {"fg": s:norm, "bg": s:cursor_line, "gui": "bold"})
+call s:h("PmenuSel",      {"fg": s:norm, "bg": s:visual, "gui": "bold"})
 
 hi! link TabLine          Normal
 hi! link TabLineSel       Keyword
@@ -308,3 +308,5 @@ hi link markdownHeadingDelimiter Constant
 
 hi link yamlBlockMappingKey Statement
 hi link pythonOperator Statement
+
+hi link jsxCloseString Normal
