@@ -202,7 +202,7 @@ call s:h("Search",        {"bg": s:selection, "fg": s:selection_fg})
 call s:h("IncSearch",     {"bg": s:selection, "fg": s:selection_fg, "gui": "bold"})
 
 " __Visual__
-call s:h("Visual",        {"bg": s:visual})
+call s:h("Visual",        {"bg": s:visual, "fg": s:selection_fg})
 " __VisualNOS__
 call s:h("VisualNOS",     {"bg": s:bg_subtle})
 
