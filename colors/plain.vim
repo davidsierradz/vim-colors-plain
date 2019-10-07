@@ -44,6 +44,74 @@ let s:dark_yellow     = { "gui": "#A89C14", "cterm": "3"   }
 let s:sol_base2       = { "gui": "#eee8d5", "cterm": "15"  }
 let s:sol_base02      = { "gui": "#32302f", "cterm": "0"   }
 
+if has('nvim')
+  if &background == "dark"
+    " dark0 + gray
+    let g:terminal_color_0 = s:black
+    let g:terminal_color_8 = s:white
+
+    " neurtral_red + bright_red
+    let g:terminal_color_1 = "#cc241d"
+    let g:terminal_color_9 = "#fb4934"
+
+    " neutral_green + bright_green
+    let g:terminal_color_2 = "#98971a"
+    let g:terminal_color_10 = "#b8bb26"
+
+    " neutral_yellow + bright_yellow
+    let g:terminal_color_3 = "#d79921"
+    let g:terminal_color_11 = "#fabd2d"
+
+    " neutral_blue + bright_blue
+    let g:terminal_color_4 = "#458588"
+    let g:terminal_color_12 = "#83a598"
+
+    " neutral_purple + bright_purple
+    let g:terminal_color_5 = "#b16286"
+    let g:terminal_color_13 = "#d3869b"
+
+    " neutral_aqua + faded_aqua
+    let g:terminal_color_6 = "#689d6a"
+    let g:terminal_color_14 = "#8ec07c"
+
+    " light4 + light1
+    let g:terminal_color_7 = "#a89984"
+    let g:terminal_color_15 = "#928374"
+  else
+    " dark0 + gray
+    let g:terminal_color_0 = s:white
+    let g:terminal_color_8 = s:black
+
+    " neurtral_red + bright_red
+    let g:terminal_color_1 = "#cc241d"
+    let g:terminal_color_9 = "#9d0006"
+
+    " neutral_green + bright_green
+    let g:terminal_color_2 = "#98971a"
+    let g:terminal_color_10 = "#79740e"
+
+    " neutral_yellow + bright_yellow
+    let g:terminal_color_3 = "#d79921"
+    let g:terminal_color_11 = "#b57614"
+
+    " neutral_blue + bright_blue
+    let g:terminal_color_4 = "#458588"
+    let g:terminal_color_12 = "#076678"
+
+    " neutral_purple + bright_purple
+    let g:terminal_color_5 = "#b16286"
+    let g:terminal_color_13 = "#8f3f71"
+
+    " neutral_aqua + faded_aqua
+    let g:terminal_color_6 = "#689d6a"
+    let g:terminal_color_14 = "#427b58"
+
+    " light4 + light1
+    let g:terminal_color_7 = "#7c6f64"
+    let g:terminal_color_15 = "#928374"
+  endif
+endif
+
 if &background == "dark"
   let s:bg               = s:black
   let s:bg_subtle        = s:light_black
