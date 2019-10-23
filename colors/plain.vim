@@ -20,29 +20,43 @@ endif
 
 let g:colors_name='plain'
 
-let s:black           = { "gui": "#282828", "cterm": "0"   }
-let s:medium_gray     = { "gui": "#767676", "cterm": "243" }
-let s:white           = { "gui": "#fbf1c7", "cterm": "15"  }
-let s:light_black     = { "gui": "#424242", "cterm": "8"   }
-let s:lighter_black   = { "gui": "#545454", "cterm": "240" }
-let s:subtle_black    = { "gui": "#303030", "cterm": "236" }
-let s:light_gray      = { "gui": "#999999", "cterm": "249" }
-let s:lighter_gray    = { "gui": "#CCCCCC", "cterm": "251" }
-let s:lightest_gray   = { "gui": "#E5E5E5", "cterm": "251" }
-let s:dark_red        = { "gui": "#C30771", "cterm": "1"   }
-let s:light_red       = { "gui": "#E32791", "cterm": "1"   }
-let s:dark_blue       = { "gui": "#008EC4", "cterm": "4"   }
-let s:light_blue      = { "gui": "#B6D6FD", "cterm": "153" }
-let s:dark_cyan       = { "gui": "#20A5BA", "cterm": "6"   }
-let s:light_cyan      = { "gui": "#4FB8CC", "cterm": "14"  }
-let s:dark_green      = { "gui": "#10A778", "cterm": "2"   }
-let s:light_green     = { "gui": "#5FD7A7", "cterm": "10"  }
-let s:dark_purple     = { "gui": "#523C79", "cterm": "5"   }
-let s:light_purple    = { "gui": "#6855DE", "cterm": "13"  }
-let s:light_yellow    = { "gui": "#F3E430", "cterm": "11"  }
-let s:dark_yellow     = { "gui": "#A89C14", "cterm": "3"   }
-let s:sol_base2       = { "gui": "#eee8d5", "cterm": "15"  }
-let s:sol_base02      = { "gui": "#32302f", "cterm": "0"   }
+let s:black            = { "gui": "#282828", "cterm": "0"   }
+let s:medium_gray      = { "gui": "#767676", "cterm": "243" }
+let s:white            = { "gui": "#fbf1c7", "cterm": "229" }
+let s:light_black      = { "gui": "#424242", "cterm": "8"   }
+let s:lighter_black    = { "gui": "#545454", "cterm": "240" }
+let s:subtle_black     = { "gui": "#303030", "cterm": "236" }
+let s:light_gray       = { "gui": "#999999", "cterm": "249" }
+let s:lighter_gray     = { "gui": "#CCCCCC", "cterm": "251" }
+let s:lightest_gray    = { "gui": "#E5E5E5", "cterm": "251" }
+let s:dark_red         = { "gui": "#C30771", "cterm": "1"   }
+let s:light_red        = { "gui": "#E32791", "cterm": "1"   }
+let s:dark_blue        = { "gui": "#008EC4", "cterm": "4"   }
+let s:light_blue       = { "gui": "#B6D6FD", "cterm": "153" }
+let s:dark_cyan        = { "gui": "#20A5BA", "cterm": "6"   }
+let s:light_cyan       = { "gui": "#4FB8CC", "cterm": "14"  }
+let s:dark_green       = { "gui": "#10A778", "cterm": "2"   }
+let s:light_green      = { "gui": "#5FD7A7", "cterm": "10"  }
+let s:dark_purple      = { "gui": "#523C79", "cterm": "5"   }
+let s:light_purple     = { "gui": "#6855DE", "cterm": "13"  }
+let s:light_yellow     = { "gui": "#F3E430", "cterm": "11"  }
+let s:dark_yellow      = { "gui": "#A89C14", "cterm": "3"   }
+let s:sol_base2        = { "gui": "#eee8d5", "cterm": "15"  }
+let s:sol_base02       = { "gui": "#32302f", "cterm": "0"   }
+
+let s:gb_faded_green   = { "gui": "#79740e", "cterm": "100" }
+let s:gb_faded_aqua    = { "gui": "#427b58", "cterm": "65"  }
+let s:gb_faded_red     = { "gui": "#9d0006", "cterm": "88"  }
+let s:gb_faded_yellow  = { "gui": "#b57614", "cterm": "136" }
+let s:gb_faded_orange  = { "gui": "#af3a03", "cterm": "130" }
+let s:gb_faded_blue    = { "gui": "#076678", "cterm": "24"  }
+
+let s:gb_bright_green  = { "gui": "#b8bb26", "cterm": "142" }
+let s:gb_bright_aqua   = { "gui": "#8ec07c", "cterm": "108" }
+let s:gb_bright_red    = { "gui": "#fb4934", "cterm": "167" }
+let s:gb_bright_yellow = { "gui": "#fabd2f", "cterm": "214" }
+let s:gb_bright_orange = { "gui": "#fe8019", "cterm": "208" }
+let s:gb_bright_blue   = { "gui": "#83a598", "cterm": "109" }
 
 if has('nvim')
   if &background == "dark"
@@ -134,6 +148,12 @@ if &background == "dark"
   let s:warning          = s:yellow
   let s:error            = s:light_red
   let s:statusline_bg    = s:sol_base02
+  let s:gb_green         = s:gb_bright_green
+  let s:gb_aqua          = s:gb_bright_aqua
+  let s:gb_red           = s:gb_bright_red
+  let s:gb_yellow        = s:gb_bright_yellow
+  let s:gb_orange        = s:gb_bright_orange
+  let s:gb_blue          = s:gb_bright_blue
 else
   let s:bg               = s:white
   let s:bg_subtle        = s:lighter_gray
@@ -156,6 +176,12 @@ else
   let s:warning          = s:yellow
   let s:error            = s:dark_red
   let s:statusline_bg    = s:sol_base2
+  let s:gb_green         = s:gb_faded_green
+  let s:gb_aqua          = s:gb_faded_aqua
+  let s:gb_red           = s:gb_faded_red
+  let s:gb_yellow        = s:gb_faded_yellow
+  let s:gb_orange        = s:gb_faded_orange
+  let s:gb_blue          = s:gb_faded_blue
 endif
 
 unlet s:black
@@ -277,13 +303,20 @@ call s:h("VisualNOS",     {"bg": s:bg_subtle})
 call s:h("Ignore",        {"fg": s:bg})
 
 " __DiffAdd__
-call s:h("DiffAdd",       {"fg": s:green})
+call s:h("DiffAdd",       {"fg": s:gb_green})
 " __DiffDelete__
-call s:h("DiffDelete",    {"fg": s:red})
+call s:h("DiffDelete",    {"fg": s:gb_red})
 " __DiffChange__
-call s:h("DiffChange",    {"fg": s:yellow})
+call s:h("DiffChange",    {"fg": s:gb_green})
 " __DiffText__
-call s:h("DiffText",      {"fg": s:constant})
+call s:h("DiffText",      {"fg": s:gb_yellow, "gui": "bold"})
+
+call s:h("diffAdded",     {"fg": s:gb_green})
+call s:h("diffRemoved",   {"fg": s:gb_red})
+call s:h("diffChanged",   {"fg": s:gb_aqua})
+call s:h("diffFile",      {"fg": s:gb_orange})
+call s:h("diffNewFile",   {"fg": s:gb_yellow})
+call s:h("diffLine",      {"fg": s:gb_blue})
 
 if has("gui_running")
   call s:h("SpellBad",    {"gui": "underline", "sp": s:red})
