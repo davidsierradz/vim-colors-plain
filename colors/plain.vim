@@ -240,7 +240,7 @@ hi! link Typedef          Type
 " hi! link Delimiter        Special
 " hi! link SpecialComment   Special
 " hi! link Debug            Special
-" hi! link VertSplit        Normal
+hi! link VertSplit        Normal
 " hi! link PreProc          Normal
 " hi! link Define           PreProc
 " hi! link Macro            PreProc
